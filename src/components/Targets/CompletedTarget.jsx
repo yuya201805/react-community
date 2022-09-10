@@ -1,0 +1,63 @@
+import React, {useCallback} from 'react';
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import ListItemText from "@material-ui/core/ListItemText";
+import Divider from "@material-ui/core/Divider";
+import {makeStyles} from "@material-ui/styles";
+import {PrimaryButton} from "../Ulkit";
+import {useDispatch} from "react-redux";
+import {push} from "connected-react-router"
+
+const useStyles = makeStyles((theme) => ({
+    list: {
+        background: '#fff',
+        height: 'auto'
+    },
+    image: {
+        objectFit: 'cover',
+        margin: '8px 16px 8px 0',
+        height: 96,
+        width: 96
+    },
+    text: {
+        width: '100%'
+    }
+}))
+
+const CompletedTarget = (props) => {
+    const classes = useStyles();
+    const dispatch = useDispatch();
+    const target = props.target;
+
+    const goToProductPage = useCallback((id) => {
+        dispatch(push('/product/'+id))
+    }, [])
+
+    return (
+        <List>
+            {Object.keys(target).map(key => {
+                // const product = products[key]
+                // const image = product.images.length > 0? product.images[0].path : "../../../assets/img/src/no_image.png" 
+
+                return (
+                    <>
+                        <ListItem className={classes.list} key={target.id}>
+                            <ListItemAvatar>
+                                {/* <img className={classes.image} src={image} alt="商品のTOP画像" /> */}
+                            </ListItemAvatar>
+                            <div className={classes.text}>
+                                <ListItemText primary={target.target_name} secondary={"詳細：" + target.target_description} />
+                                <ListItemText primary={"コメント" + target.comment} />
+                            </div>
+                            {/* <PrimaryButton label={"商品詳細を見る"} onClick={() => goToProductPage(target.id)} /> */}
+                        </ListItem>
+                        <Divider />
+                    </>
+                )
+            })}
+        </List>
+    );
+};
+
+export default CompletedTarget;
