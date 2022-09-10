@@ -23,6 +23,8 @@ FirebaseとReactを連携しました。
 ## 目標の詳細(チャットに参加しようをクリックするとチャットに参加できます。)
 ![スクリーンショット 2022-09-10 14 38 58](https://user-images.githubusercontent.com/50696651/189470915-5f93fa5c-b49d-465f-b2b4-98e23a452f99.png)
 
+## チャット機能と目標達成した人の一言コメントが見れます
+![スクリーンショット 2022-09-10 14 39 25](https://user-images.githubusercontent.com/50696651/189470973-7f7213da-7343-4cb8-81f6-34e105abae6b.png)
 
 
 # 使用技術
