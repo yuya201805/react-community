@@ -16,7 +16,9 @@ Reactを学習するために、基本的なCRUD機能を開発。<br>
 また、Firebaseと連携したアプリを作成してみたかったので、
 FirebaseとReactを連携しました。
 
-## アプリ構成
+# アプリ構成
+## 目標の一覧
+![スクリーンショット 2022-09-10 14 38 48](https://user-images.githubusercontent.com/50696651/189470866-b72ab2e2-fe19-48b5-804b-ac4e43573c65.png)
 
 
 # 使用技術
